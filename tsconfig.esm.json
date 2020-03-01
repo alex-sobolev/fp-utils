@@ -1,9 +1,10 @@
 {
-  "extends": "./tsconfig.base.json",
+  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "./dist/esm",
     "module": "es6",
     "noEmit": false,
+    "outDir": "./dist/esm",
+    "sourceMap": false,
     "target": "es6"
   }
 }
