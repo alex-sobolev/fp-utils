@@ -4,13 +4,13 @@
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "lib": ["es6", "dom"],
-    "module": "commonjs",
+    "module": "es6",
     "moduleResolution": "node",
     "removeComments": true,
     "sourceMap": true,
     "strict": true,
-    "target": "es5"
+    "target": "es6"
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "exclude": ["node_modules"]
 }

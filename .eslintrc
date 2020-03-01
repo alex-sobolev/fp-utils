@@ -4,7 +4,7 @@
     "ecmaVersion": 2018,
     "sourceType": "module",
     "tsconfigRootDir": "./",
-    "project": "tsconfig.esm.json"
+    "project": "tsconfig.json"
   },
   "rules": {},
   "extends": [
@@ -12,5 +12,6 @@
     "prettier/@typescript-eslint",
     "plugin:prettier/recommended"
   ],
-  "ignorePatterns": ["node_modules", "dist"]
+  "ignorePatterns": ["node_modules", "dist", "jest.config.js"],
+  "plugins": ["jest"]
 }
