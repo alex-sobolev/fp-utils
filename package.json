@@ -15,7 +15,8 @@
     "lint": "eslint --fix src/**/*",
     "prettier:check": "prettier --list-different \"src/**/*.{ts,tsx}\"",
     "prettier:write": "prettier --write \"src/**/*.{ts,tsx}\"",
-    "test": "jest"
+    "test": "jest",
+    "test-coverage": "jest --collectCoverage"
   },
   "husky": {
     "hooks": {

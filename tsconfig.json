@@ -2,14 +2,18 @@
   "compilerOptions": {
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
     "declaration": true,
     "lib": ["es6", "dom"],
-    "module": "es6",
+    "module": "esnext",
     "moduleResolution": "node",
+    "paths": {},
     "removeComments": true,
+    "rootDir": ".",
     "sourceMap": true,
     "strict": true,
-    "target": "es6"
+    "target": "esnext"
+
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
