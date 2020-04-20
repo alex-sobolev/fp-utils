@@ -1,4 +1,4 @@
-import { addNums } from './index';
+import { addNums } from '../index';
 
 describe('Testing framework setup test', () => {
   it('should add two numbers', () => {
