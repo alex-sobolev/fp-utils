@@ -5,7 +5,7 @@
     "noEmit": false,
     "outDir": "./dist/esm",
     "sourceMap": false,
-    "target": "es6"
+    "target": "es2020"
   },
   "exclude": ["node_modules", "**/*.spec.ts"]
 }
