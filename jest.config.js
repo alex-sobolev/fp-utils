@@ -9,7 +9,7 @@ module.exports = {
   collectCoverageFrom: [
     '<rootDir>/src/**/*.ts',
     '!<rootDir>/src/**/*.d.ts',
-    '!<rootDir>/src/**/*.spec.ts?(x)'
+    '!<rootDir>/src/**/*.(spec|test).ts?(x)'
   ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   cacheDirectory: '<rootDir>/node_modules/.cache/jest',

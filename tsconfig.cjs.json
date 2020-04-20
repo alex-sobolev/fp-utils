@@ -5,6 +5,5 @@
     "module": "commonjs",
     "noEmit": false,
     "target": "es2019"
-  },
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  }
 }
