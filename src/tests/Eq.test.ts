@@ -1,4 +1,4 @@
-import { eqNum, eqString, eqBool } from '../Eq';
+import { eqNum, eqString, eqBool, eqObj, eqSymbol } from '../Eq';
 
 describe('Eq typeclass', () => {
   it('should compare two numbers for equality and return true when numbers are equal', () => {
@@ -35,5 +35,41 @@ describe('Eq typeclass', () => {
     const { eq } = eqBool;
 
     expect(eq(false, true)).toEqual(false);
+  });
+
+  it('should compare two objects of any shape and return true when they are deep equal', () => {
+    const { eq } = eqObj;
+    const obj1 = {
+      prop1: 1,
+      prop2: 'test',
+    };
+    const obj2 = {
+      prop2: 'test',
+      prop1: 1,
+    };
+
+    expect(eq(obj1, obj2)).toEqual(true);
+  });
+
+  it('should compare two objects of any shape and return false when they are not deep equal', () => {
+    const { eq } = eqObj;
+    const obj1 = {
+      prop1: 1,
+      prop2: 'x',
+    };
+    const obj2 = {
+      prop1: 1,
+      prop2: 'y',
+    };
+
+    expect(eq(obj1, obj2)).toEqual(false);
+  });
+
+  it('should compare two symbols and return false when they are not the same symbol', () => {
+    const { eq } = eqSymbol;
+    const x = Symbol('x');
+    const y = Symbol('x');
+
+    expect(eq(x, y)).toEqual(false);
   });
 });
