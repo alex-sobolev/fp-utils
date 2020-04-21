@@ -2,7 +2,7 @@ export type Obj = {
   [key: string]: any;
 };
 
-export const compareObjects = (x: Obj, y: Obj): boolean => {
+export const compareObjectsForEq = (x: Obj, y: Obj): boolean => {
   const xProps: string[] = Object.getOwnPropertyNames(x);
   const yProps: string[] = Object.getOwnPropertyNames(y);
 

@@ -1,4 +1,4 @@
-import { eqNum, eqString, eqBool, eqObj, eqSymbol } from '../index';
+import { eqNum, eqString, eqBool, eqObj, eqSymbol } from '../Eq';
 
 describe('Eq typeclass', () => {
   it('should compare two numbers for equality and return true when numbers are equal', () => {
