@@ -1,4 +1,4 @@
-import { compareObjects, AnyObject } from './utils/compareObjects';
+import { compareObjects, Obj } from './utils/compareObjects';
 import { eq } from './utils/eq';
 
 export interface Eq<A> {
@@ -21,6 +21,6 @@ export const eqSymbol: Eq<symbol> = {
   eq,
 };
 
-export const eqObj: Eq<AnyObject> = {
+export const eqObj: Eq<Obj> = {
   eq: compareObjects,
 };
