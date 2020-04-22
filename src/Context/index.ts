@@ -1,4 +1,4 @@
 export interface Context<F, A> {
-  type: F;
-  value: A;
+  kind: F;
+  val?: A;
 }
