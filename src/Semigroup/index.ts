@@ -1,33 +1,43 @@
+import {
+  Arr,
+  Obj,
+  combineSum,
+  combineProduct,
+  combineStrings,
+  combineAll,
+  combineAny,
+  combineObjects,
+  combineArrays,
+} from './utils/combine';
+
 export interface Semigroup<A> {
   combine: (x: A, y: A) => A;
 }
 
 export const combineNumSum: Semigroup<number> = {
-  combine: (x: number, y: number) => x + y,
+  combine: combineSum,
 };
 
 export const combineNumProduct: Semigroup<number> = {
-  combine: (x: number, y: number) => x * y,
+  combine: combineProduct,
 };
 
 export const combineStr: Semigroup<string> = {
-  combine: (x: string, y: string) => x + y,
+  combine: combineStrings,
 };
 
-export const combineBool: Semigroup<boolean> = {
-  combine: (x: boolean, y: boolean) => x && y,
+export const combineBoolAll: Semigroup<boolean> = {
+  combine: combineAll,
 };
 
-type Obj = {
-  [key: string]: any;
+export const combineBoolAny: Semigroup<boolean> = {
+  combine: combineAny,
 };
 
 export const combineObj: Semigroup<Obj> = {
-  combine: (x: Obj, y: Obj) => ({ ...x, ...y }),
+  combine: combineObjects,
 };
 
-type Arr = any[];
-
 export const combineArr: Semigroup<Arr> = {
-  combine: (x: Arr, y: Arr) => [...x, ...y],
+  combine: combineArrays,
 };

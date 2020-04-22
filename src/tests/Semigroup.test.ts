@@ -2,8 +2,10 @@ import {
   combineNumSum,
   combineNumProduct,
   combineStr,
-  combineBool,
+  combineBoolAll,
+  combineBoolAny,
   combineObj,
+  combineArr,
 } from '../Semigroup';
 
 describe('Semigroup typeclass', () => {
@@ -34,11 +36,20 @@ describe('Semigroup typeclass', () => {
     expect(combine(x, y)).toEqual(expected);
   });
 
-  it('should join two booleans', () => {
-    const { combine } = combineBool;
+  it('should join two booleans with &&', () => {
+    const { combine } = combineBoolAll;
     const x = true;
     const y = false;
     const expected = false;
+
+    expect(combine(x, y)).toEqual(expected);
+  });
+
+  it('should combine two booleans with ||', () => {
+    const { combine } = combineBoolAny;
+    const x = true;
+    const y = false;
+    const expected = true;
 
     expect(combine(x, y)).toEqual(expected);
   });
@@ -58,6 +69,15 @@ describe('Semigroup typeclass', () => {
       prop2: 'value 3',
       prop3: 'value 4',
     };
+
+    expect(combine(x, y)).toEqual(expected);
+  });
+
+  it('should concatenate two arrays', () => {
+    const { combine } = combineArr;
+    const x = [1, 2];
+    const y = [3, 4];
+    const expected = [1, 2, 3, 4];
 
     expect(combine(x, y)).toEqual(expected);
   });
