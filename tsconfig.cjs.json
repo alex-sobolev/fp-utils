@@ -4,6 +4,6 @@
     "outDir": "./dist/cjs",
     "module": "commonjs",
     "noEmit": false,
-    "target": "es2019"
+    "target": "es2020"
   }
 }
